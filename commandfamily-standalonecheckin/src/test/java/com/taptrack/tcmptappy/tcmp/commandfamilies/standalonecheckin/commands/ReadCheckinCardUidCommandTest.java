@@ -4,22 +4,22 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ReadCheckinUidCommandTest {
+public class ReadCheckinCardUidCommandTest {
 
     @Test
     public void testParsing() throws Exception {
         byte timeout = 0x54;
-        ReadCheckinUidCommand checkinUidCommand = new ReadCheckinUidCommand(timeout);
+        ReadCheckinCardUidCommand checkinUidCommand = new ReadCheckinCardUidCommand(timeout);
         byte[] payload = checkinUidCommand.getPayload();
 
-        ReadCheckinUidCommand testCommand = new ReadCheckinUidCommand();
+        ReadCheckinCardUidCommand testCommand = new ReadCheckinCardUidCommand();
         testCommand.parsePayload(payload);
         assertEquals(timeout,testCommand.getTimeout());
     }
 
     @Test
     public void testGetCommandCode() throws Exception {
-        ReadCheckinUidCommand command = new ReadCheckinUidCommand();
+        ReadCheckinCardUidCommand command = new ReadCheckinCardUidCommand();
         assertEquals(0x05,command.getCommandCode());
     }
 }

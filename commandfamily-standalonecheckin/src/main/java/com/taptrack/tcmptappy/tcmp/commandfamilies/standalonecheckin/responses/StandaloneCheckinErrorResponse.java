@@ -5,9 +5,41 @@ import com.taptrack.tcmptappy.tcmp.StandardErrorResponse;
 import com.taptrack.tcmptappy.tcmp.StandardErrorResponseDelegate;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.AbstractStandaloneCheckinMessage;
 
+/**
+ * An error occurred executing a Standalone Checkin command library operation
+ */
 public class StandaloneCheckinErrorResponse extends AbstractStandaloneCheckinMessage implements StandardErrorResponse {
     public static final byte COMMAND_CODE = 0x7F;
     protected StandardErrorResponseDelegate delegate;
+
+    public interface ErrorCodes {
+        byte TOO_FEW_PARAMETERS = 0x01;
+        byte TOO_MANY_PARAMETERS = 0x02;
+        /**
+         * The tappy can respond with at most 100 checkins at a time
+         */
+        byte TOO_MANY_CHECKINS_TO_QUERY_AT_ONCE = 0x03;
+        /**
+         * The tappy cannot use the name specified. This may occur if a
+         * name longer than 16 bytes is specified
+         */
+        byte ERROR_PROGRAMMING_NAME = 0x04;
+        /**
+         * Can occur when something goes wrong with the realtime clock's oscillator
+         */
+        byte OSCILLATOR_ERROR = 0x05;
+        /**
+         * Occurs when there was an error reported when getting or setting the time/date
+         */
+        byte REALTIME_CLOCK_ERROR = 0x06;
+        /**
+         * Occurs when there was an unknown  error reported when getting or setting the time/date
+         */
+        byte UNKNOWN_CLOCK_ERROR = 0x07;
+        byte UNRECOGNIZED_COMMAND_CODE = 0x08;
+        byte INVALID_PARAMETER = 0x09;
+        byte PROBLEM_DETECTING_CARD = 0x0A;
+    }
 
     public StandaloneCheckinErrorResponse() {
         delegate = new StandardErrorResponseDelegate();

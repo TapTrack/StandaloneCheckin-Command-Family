@@ -15,6 +15,10 @@ public class CheckinTagUidResponse extends AbstractStandaloneCheckinMessage {
         this.uid = uid;
     }
 
+    /**
+     * Get the 7-byte UID for a checkint ag
+     * @return
+     */
     public byte[] getUid() {
         return uid;
     }

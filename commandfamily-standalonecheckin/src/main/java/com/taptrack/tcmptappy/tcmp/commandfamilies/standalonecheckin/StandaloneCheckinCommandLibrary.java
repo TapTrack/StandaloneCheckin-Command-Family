@@ -7,7 +7,7 @@ import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.Ge
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.GetStandaloneCheckinFamilyVersionCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.GetStationInfoCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.GetTimeAndDateCommand;
-import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.ReadCheckinUidCommand;
+import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.ReadCheckinCardUidCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.ResetCheckinsCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.SetStationIdCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.SetStationNameCommand;
@@ -41,8 +41,8 @@ public class StandaloneCheckinCommandLibrary implements CommandFamily {
             case GetCheckinCountCommand.COMMAND_CODE:
                 parsedMessage = new GetCheckinCountCommand();
                 break;
-            case ReadCheckinUidCommand.COMMAND_CODE:
-                parsedMessage = new ReadCheckinUidCommand();
+            case ReadCheckinCardUidCommand.COMMAND_CODE:
+                parsedMessage = new ReadCheckinCardUidCommand();
                 break;
             case SetStationIdCommand.COMMAND_CODE:
                 parsedMessage = new SetStationIdCommand();

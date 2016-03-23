@@ -7,7 +7,7 @@ import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.Ge
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.GetStandaloneCheckinFamilyVersionCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.GetStationInfoCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.GetTimeAndDateCommand;
-import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.ReadCheckinUidCommand;
+import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.ReadCheckinCardUidCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.ResetCheckinsCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.SetStationIdCommand;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands.SetStationNameCommand;
@@ -80,7 +80,7 @@ public class StandaloneCheckinCommandLibraryTest {
         testCommand(new GetCheckinCountCommand(),GetCheckinCountCommand.class);
         testCommand(new SetStationIdCommand(),SetStationIdCommand.class);
         testCommand(new SetStationNameCommand(),SetStationNameCommand.class);
-        testCommand(new ReadCheckinUidCommand(),ReadCheckinUidCommand.class);
+        testCommand(new ReadCheckinCardUidCommand(),ReadCheckinCardUidCommand.class);
         testCommand(new ResetCheckinsCommand(),ResetCheckinsCommand.class);
         testCommand(new GetStationInfoCommand(),GetStationInfoCommand.class);
         // have to use a legit year 20XX timestamp due to payload format

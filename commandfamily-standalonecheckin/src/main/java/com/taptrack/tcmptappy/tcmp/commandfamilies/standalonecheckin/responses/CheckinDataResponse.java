@@ -32,14 +32,29 @@ public class CheckinDataResponse extends AbstractStandaloneCheckinMessage {
         timestamp = (int) (calendar.getTimeInMillis() / 1000L);
     }
 
+    /**
+     * Retrieve the UID for the checkin data response
+     * @return
+     */
     public byte[] getUid() {
         return uid;
     }
 
+    /**
+     * Set the UID for a checkin data response
+     * @param uid
+     */
     public void setUid(byte[] uid) {
         this.uid = uid;
     }
 
+    /**
+     * Retrieves the 32-bit unix timestamp corresponding to this checkin
+     *
+     * Note that the Tappy only stores timestamps with minute-level accuracy, so
+     * this timestamp may be up to a minute off of when the checkin actually occured
+     * @return
+     */
     public int getTimestamp() {
         return timestamp;
     }

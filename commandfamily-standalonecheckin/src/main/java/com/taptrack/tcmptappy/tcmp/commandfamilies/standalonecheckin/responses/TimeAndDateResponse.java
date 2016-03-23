@@ -16,6 +16,10 @@ public class TimeAndDateResponse extends AbstractStandaloneCheckinMessage {
         this.timestamp = unixTimestamp;
     }
 
+    /**
+     * Retrieve the timestamp corresponding to this time and date
+     * @return 32-bit unix timestamp
+     */
     public int getTimestamp() {
         return timestamp;
     }

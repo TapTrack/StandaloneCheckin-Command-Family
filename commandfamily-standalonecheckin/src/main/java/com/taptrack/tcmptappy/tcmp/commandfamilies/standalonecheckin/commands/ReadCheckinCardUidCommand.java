@@ -3,22 +3,34 @@ package com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.commands;
 import com.taptrack.tcmptappy.tcmp.MalformedPayloadException;
 import com.taptrack.tcmptappy.tcmp.commandfamilies.standalonecheckin.AbstractStandaloneCheckinMessage;
 
-public class ReadCheckinUidCommand extends AbstractStandaloneCheckinMessage {
+public class ReadCheckinCardUidCommand extends AbstractStandaloneCheckinMessage {
     public static final byte COMMAND_CODE = 0x05;
     private byte timeout;
 
-    public ReadCheckinUidCommand() {
+    public ReadCheckinCardUidCommand() {
         this.timeout = 0x00;
     }
 
-    public ReadCheckinUidCommand(byte timeout) {
+    public ReadCheckinCardUidCommand(byte timeout) {
         this.timeout = timeout;
     }
 
+    /**
+     * Retreive the timeout after which the Tappy will stop scanning
+     *
+     * 0x00 disables timeout
+     * @return
+     */
     public byte getTimeout() {
         return timeout;
     }
 
+    /**
+     * Set the timeout after which the Tappy will stop attempting to read
+     *
+     * 0x00 disables timeout
+     * @param timeout
+     */
     public void setTimeout(byte timeout) {
         this.timeout = timeout;
     }

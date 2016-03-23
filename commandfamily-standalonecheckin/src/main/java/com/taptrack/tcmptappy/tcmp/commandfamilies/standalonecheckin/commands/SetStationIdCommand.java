@@ -16,10 +16,22 @@ public class SetStationIdCommand extends AbstractStandaloneCheckinMessage {
         this.stationId = stationId;
     }
 
+    /**
+     * Get the station's numeric id
+     * @return station id, a 16 bit unsigned int
+     */
     public int getStationId() {
         return stationId;
     }
 
+    /**
+     * Set the numeric id this command will change the station to use
+     *
+     * This value should be a valid 16 bit unsigned integer. If it is not, the lower
+     * two bytes will be used.
+     *
+     * @param stationId
+     */
     public void setStationId(int stationId) {
         this.stationId = stationId;
     }

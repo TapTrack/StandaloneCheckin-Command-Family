@@ -16,7 +16,13 @@ public class NumberOfCheckinsResponse extends AbstractStandaloneCheckinMessage {
         this.numberOfCheckins = numberOfCheckins;
     }
 
-    public long getNumberOfCheckins() {
+    /**
+     * Represents the number of checkins stored on the Tappy
+     *
+     * Contains a value that would be a valid 16 bit unsigned int
+     * @return
+     */
+    public int getNumberOfCheckins() {
         return numberOfCheckins;
     }
 

@@ -27,6 +27,10 @@ public class StationInfoResponse extends AbstractStandaloneCheckinMessage {
         }
     }
 
+    /**
+     * Retrieve the id of the station
+     * @return 16-bit unsigned integer value
+     */
     public int getId() {
         return id;
     }
@@ -35,6 +39,10 @@ public class StationInfoResponse extends AbstractStandaloneCheckinMessage {
         this.id = id;
     }
 
+    /**
+     * Up to 16 byte station name
+     * @return
+     */
     public String getName() {
         return name;
     }

@@ -16,10 +16,22 @@ public class SetTimeAndDateCommand extends AbstractStandaloneCheckinMessage {
         this.timestamp = unixTimestamp;
     }
 
+    /**
+     * Get the timestamp this command will set the Tappy to use as the current time
+     * @return
+     */
     public int getTimestamp() {
         return timestamp;
     }
 
+    /**
+     * Set the timestamp to set the tappy to use as the current time
+     *
+     * Note that the Tappy's realtime clock only supports the 21st century,
+     * so times corresponding to earlier periods of time have undefined behaviour
+     *
+     * @param timestamp 32-bit unix timestamp
+     */
     public void setTimestamp(int timestamp) {
         this.timestamp = timestamp;
     }
