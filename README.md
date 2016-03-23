@@ -5,7 +5,7 @@ to work with TappyBLE devices.
 [ ![Download](https://api.bintray.com/packages/taptrack/maven/commandfamily-standalonecheckin/images/download.svg) ](https://bintray.com/taptrack/maven/commandfamily-standalonecheckin/_latestVersion)
 
 ```groovy
-compile "com.taptrack.tcmptappy:commandfamily-standalonecheckin:0.1.0"
+compile "com.taptrack.tcmptappy:commandfamily-standalonecheckin:0.2.0"
 ```
 
 Note that not all TappyBLE units ship with this command family available.
