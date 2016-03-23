@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StandaloneCheckin.iml" filepath="$PROJECT_DIR$/StandaloneCheckin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commandfamily-standalonecheckin/commandfamily-standalonecheckin.iml" filepath="$PROJECT_DIR$/commandfamily-standalonecheckin/commandfamily-standalonecheckin.iml" />
+    </modules>
+  </component>
+</project>
