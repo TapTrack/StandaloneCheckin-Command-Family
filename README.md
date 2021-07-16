@@ -1,3 +1,5 @@
+# Deprecated - Refer to https://github.com/TapTrack/TCMPTappy-Android for the currently supported version of this command family. 
+
 # Standalone Checkin Command Family
 Standalone Checkin command family for TappyBLE devices. Please see the TappyBLE project wiki for details on how
 to work with TappyBLE devices.
